@@ -1,4 +1,4 @@
-import './src/app1/index.js';
+import './src/api-pony/index.js';
 import './style.css';
 
 /*

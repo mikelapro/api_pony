@@ -1,7 +1,6 @@
 import { checkApp, getRequest, postRequest, putRequest, patchRequest, deleteRequest } from './usecases/index.js';
 
-// Referencias del HTML.
-//#region
+//#region Referencias del HTML.
 const getButton = document.querySelector( '#get' );
 const postButton = document.querySelector( '#post' );
 const putButton = document.querySelector( '#put' );
@@ -9,8 +8,7 @@ const patchButton = document.querySelector( '#patch' );
 const deleteButton = document.querySelector( '#delete' );
 //#endregion 
 
-// Eventos.
-//#region 
+//#region Eventos.
 getButton.addEventListener( 'click', () => {
     getRequest();
 } );
