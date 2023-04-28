@@ -8081,11 +8081,11 @@
     },
     {
       "id": 564,
-      "name": "Mike flight",
+      "name": "Mike fligth",
       "alias": "Princess developer",
       "url": "https://mlp.fandom.com/wiki/Twilight_Sparkle",
       "sex": "Female",
-      "residence": "Canterlot (S1E1, S9E26)\nCastle of Friendship, Ponyville (seasons 5-9)\nGolden Oak Library, Ponyville (seasons 1-4)\nCrystal Princess Palace (toy line)",
+      "residence": "...",
       "occupation": "Developer",
       "kind": [
         "Developer",
@@ -8094,7 +8094,7 @@
         "Alicorn"
       ],
       "image": [
-        "https://vignette.wikia.nocookie.net/mlp/images/b/bc/Princess_Twilight_Sparkle_ID_S4E26.png/revision/latest?cb=20160207045127"
+        "https://avatars.githubusercontent.com/u/79405108?v=4"
       ]
     }
   ]

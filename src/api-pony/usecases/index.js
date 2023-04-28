@@ -4,5 +4,5 @@ export { checkApp } from './check-app.js'; // Caso de uso check-app.
 export { getRequest } from './get-request.js';
 export { postRequest } from './post-request.js';
 export { putRequest } from './put-request.js';
-export { patchRequest } from './patch-request.js';
 export { deleteRequest } from './delete-request.js';
+export { getByIdRequest } from './get-by-id-request.js';

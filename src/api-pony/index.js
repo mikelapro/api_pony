@@ -1,11 +1,12 @@
-import { checkApp, getRequest, postRequest, putRequest, patchRequest, deleteRequest } from './usecases/index.js';
+import { checkApp, getRequest, postRequest, putRequest, deleteRequest, getByIdRequest } from './usecases/index.js';
+export const ponysUrl = 'http://localhost:3001/ponys';
 
 //#region Referencias del HTML.
 const getButton = document.querySelector( '#get' );
 const postButton = document.querySelector( '#post' );
 const putButton = document.querySelector( '#put' );
-const patchButton = document.querySelector( '#patch' );
 const deleteButton = document.querySelector( '#delete' );
+const getByIdButton = document.querySelector( '#get-by-id' );
 //#endregion 
 
 //#region Eventos.
@@ -21,12 +22,12 @@ putButton.addEventListener( 'click', () => {
     putRequest();
 } );
 
-patchButton.addEventListener( 'click', () => {
-    patchRequest();
-} );
-
 deleteButton.addEventListener( 'click', () => {
     deleteRequest();
+} );
+
+getByIdButton.addEventListener( 'click', () => {
+    getByIdRequest();
 } );
 //#endregion
 
