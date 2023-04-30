@@ -1,5 +1,6 @@
 import { checkApp, getRequest, postRequest, putRequest, deleteRequest, getByIdRequest } from './usecases/index.js';
 export const ponysUrl = 'http://localhost:3001/ponys';
+//https://ponyapi.net/
 
 //#region Referencias del HTML.
 const getButton = document.querySelector( '#get' );
@@ -7,6 +8,7 @@ const postButton = document.querySelector( '#post' );
 const putButton = document.querySelector( '#put' );
 const deleteButton = document.querySelector( '#delete' );
 const getByIdButton = document.querySelector( '#get-by-id' );
+const ponyInput = document.querySelector( '#pony-id' );
 //#endregion 
 
 //#region Eventos.
@@ -23,14 +25,12 @@ putButton.addEventListener( 'click', () => {
 } );
 
 deleteButton.addEventListener( 'click', () => {
-    deleteRequest();
+    deleteRequest( ponyInput.value );
 } );
 
 getByIdButton.addEventListener( 'click', () => {
-    getByIdRequest();
+    getByIdRequest( ponyInput.value );
 } );
 //#endregion
 
 checkApp();
-
-//https://ponyapi.net/

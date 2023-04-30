@@ -2,12 +2,12 @@ import { ponysUrl } from '../index.js';
 
 /**
  * Elimina el objeto correspondiente al id especificado en la url.
- * @param {String|Number} id
+ * @param {String|Number} ponyId
  */
-export const deleteRequest = async () => {
+export const deleteRequest = async ( ponyId ) => {
     console.log( 'Button DELETE' );
 
-    const url = `${ponysUrl}/564`;
+    const url = `${ponysUrl}/${ponyId}`;
     const res = await fetch( url, {
         method: 'DELETE'
     } );

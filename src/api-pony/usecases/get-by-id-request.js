@@ -2,16 +2,17 @@ import { ponysUrl } from '../index.js';
 
 /**
  * Obtiene el objeto correspondiente al id especificado en la url.
+ * @param {number} ponyId 
  */
-export const getByIdRequest = async () => {
+export const getByIdRequest = async ( ponyId ) => {
     console.log( 'Button GET BY ID' );
 
-    const url = `${ponysUrl}/564`;
-    
-    const response = await fetch( url, { 
+    const url = `${ponysUrl}/${ponyId}`;
+
+    const response = await fetch( url, {
         method: 'GET' // Verbo.
-    } ); 
-    
+    } );
+
     const data = await response.json();
     console.log( data );
 }
