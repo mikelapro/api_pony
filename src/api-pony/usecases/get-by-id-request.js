@@ -3,6 +3,7 @@ import { ponysUrl } from '../index.js';
 /**
  * Obtiene el objeto correspondiente al id especificado en la url.
  * @param {number} ponyId 
+ * @returns {pony}
  */
 export const getByIdRequest = async ( ponyId ) => {
     console.log( 'Button GET BY ID' );
@@ -15,4 +16,5 @@ export const getByIdRequest = async ( ponyId ) => {
 
     const data = await response.json();
     console.log( data );
+    return data;
 }

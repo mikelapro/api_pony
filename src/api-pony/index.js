@@ -24,16 +24,23 @@ postButton.addEventListener( 'click', () => {
     postRequest( getPonyEjemplo1() );
 } );
 
-putButton.addEventListener( 'click', () => {
-    putRequest();
+putButton.addEventListener( 'click', async () => {
+    // 1. Obtener el pony a modificar por id.
+    const pony = await getByIdRequest( ponyInput.value );
+
+    // 2. Modificar el nombre agregandole un '1'.
+    pony.name = pony.name + '1';
+
+    // 3. Llamar al caso de uso put request enviandole el pony modificado.
+    putRequest( pony );
 } );
 
 deleteButton.addEventListener( 'click', () => {
     deleteRequest( ponyInput.value );
 } );
 
-getByIdButton.addEventListener( 'click', () => {
-    getByIdRequest( ponyInput.value );
+getByIdButton.addEventListener( 'click', async () => {
+    const pony = await getByIdRequest( ponyInput.value );
 } );
 //#endregion
 
@@ -44,16 +51,16 @@ checkApp();
  * @returns pony.
  */
 const getPonyEjemplo1 = () => {
-    const pony = new Pony( 
-        565, 
-        'Esteban', 
-        'Armandoestebanquito', 
-        null, 
+    const pony = new Pony(
+        565,
+        'Esteban',
+        'Armandoestebanquito',
+        null,
         'Male',
         null,
         'Programador',
-        [ 'Human', 'Heart' ],
+        ['Human', 'Heart'],
         null
-        );
-    return pony; 
+    );
+    return pony;
 }
