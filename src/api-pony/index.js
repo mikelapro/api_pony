@@ -1,4 +1,5 @@
 import { checkApp, getRequest, postRequest, putRequest, deleteRequest, getByIdRequest } from './usecases/index.js';
+import { Pony } from './models/pony.js';
 export const ponysUrl = 'http://localhost:3001/ponys';
 //https://ponyapi.net/
 
@@ -17,7 +18,10 @@ getButton.addEventListener( 'click', () => {
 } );
 
 postButton.addEventListener( 'click', () => {
-    postRequest();
+    // NOTE: En una app real, los datos del nuevo pony se le pedirian al usuario.
+    // como en este ejemplo estamos probando APIs, lo vamos a crear nosotros 
+    // directamente.
+    postRequest( getPonyEjemplo1() );
 } );
 
 putButton.addEventListener( 'click', () => {
@@ -34,3 +38,22 @@ getByIdButton.addEventListener( 'click', () => {
 //#endregion
 
 checkApp();
+
+/**
+ * Crea un pony de ejemplo para el caso de uso post-request.
+ * @returns pony.
+ */
+const getPonyEjemplo1 = () => {
+    const pony = new Pony( 
+        565, 
+        'Esteban', 
+        'Armandoestebanquito', 
+        null, 
+        'Male',
+        null,
+        'Programador',
+        [ 'Human', 'Heart' ],
+        null
+        );
+    return pony; 
+}
